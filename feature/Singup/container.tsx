@@ -15,7 +15,9 @@ const regexEmail = /^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/;
 const SingUp = ({ navigation }: { navigation: NativeStackNavigationProp<AnyElement> }) => {
     const [formData, setData] = React.useState<ISingUp>({} as ISingUp);
     const [errors, setErrors] = React.useState<Partial<ISingUp>>({});
-    const { mutate: createUser } = useCreateUser(() => navigation.navigate('SingIn'));
+    const { mutate: createUser } = useCreateUser(() => {
+        navigation.navigate('SingIn')
+    });
     const fields = [
         { key: 'email', label: 'Email', type: 'text' as InputType },
         { key: 'password', label: 'Password', type: 'password' as InputType },
@@ -117,9 +119,9 @@ const SingUp = ({ navigation }: { navigation: NativeStackNavigationProp<AnyEleme
             <Box style={{ position: "relative", top: "10%", flexDirection: "column" }} justifyContent="center" alignItems="center" >
                 <Box style={{ display: "flex" }} flexDirection={"row"}>
                     <FontAwesome name="shopping-bag" size={24} color="#c2292c" />
-                    <Box style={{ height: "100%", paddingTop: 8 }}>
+                    <Box style={{ height: "100%" }}>
                         <Image
-                            style={{ width: 100, height: 14, marginLeft: 12 }}
+                            style={{ width: 100, height: 30, marginLeft: 12 }}
                             resizeMode="contain"
                             alt="image" source={require("../../assets/images/logo.png")}
                         />
@@ -128,7 +130,8 @@ const SingUp = ({ navigation }: { navigation: NativeStackNavigationProp<AnyEleme
                 <Box style={{ display: "flex", flexDirection: "row" }} justifyContent={"center"} alignItems={"center"} marginTop={12}>
                     <FontAwesome name="phone" size={22} color="green" />
                     <Text style={{ color: "blue", marginLeft: 22 }} onPress={handleCallPhone}>
-                        Contact: 0123456789</Text>
+                        Contact: 0123456789
+                    </Text>
                 </Box>
             </Box>
         </Center>

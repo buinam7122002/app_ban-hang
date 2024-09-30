@@ -1,9 +1,7 @@
 import React from 'react';
-import { Easing, Notifier, NotifierComponents } from 'react-native-notifier';
-import { Text, TouchableOpacity, View, StyleSheet } from 'react-native';
+import { Easing, Notifier } from 'react-native-notifier';
+import { Text, View, StyleSheet } from 'react-native';
 import AntDesign from '@expo/vector-icons/AntDesign';
-{/* <AntDesign name="closecircle" size={24} color="black" />
-<AntDesign name="checkcircle" size={24} color="black" /> */}
 export enum AlertTypes {
     ERROR = 'error',
     SUCCESS = 'success',

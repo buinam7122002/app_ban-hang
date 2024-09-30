@@ -23,6 +23,7 @@ export const ItemCategory = () => {
             <View style={styles.item}>
                 <Box justifyContent={"center"} alignItems={"center"} w={"100%"} h={"100%"}>
                     <Image
+                        alt="Vay"
                         resizeMode='cover'
                         w={"70"}
                         h={"70"}
@@ -74,13 +75,11 @@ const styles = StyleSheet.create({
         flexWrap: 'wrap',
     },
     item: {
-        width: 104,
+        width: 96,
         height: 110,
         justifyContent: 'center',
         alignItems: 'center',
         margin: 5,
         backgroundColor: "#f4f4f5",
-        // borderWidth: 1,
-        // borderStyle: "solid"
     },
 });

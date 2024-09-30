@@ -23,18 +23,21 @@ export const CSlick = () => {
         <Slick autoplayTimeout={4} activeDotColor="black" dotColor="white" style={styles.wrapper} autoplay showsButtons={false}>
             <Box style={styles.slide1}>
                 <Image
+                    alt=""
                     source={{ uri: "https://file.hstatic.net/200000584505/file/web-mb-trang-chu.jpg" }}
                     style={styles.image}
                 />
             </Box>
             <Box style={styles.slide1}>
                 <Image
+                    alt=""
                     source={{ uri: "https://file.hstatic.net/200000584505/file/banner-mobile.jpg" }}
                     style={styles.image}
                 />
             </Box>
             <Box style={styles.slide1}>
                 <Image
+                    alt=""
                     source={{ uri: "https://file.hstatic.net/200000584505/file/web-mobile_2.jpg" }}
                     style={styles.image}
                 />

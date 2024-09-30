@@ -1,12 +1,14 @@
 import * as React from "react";
-import { Box, Text, Heading, VStack, FormControl, Input, Link, Button, HStack, Center, NativeBaseProvider } from "native-base";
+import { Box, Text, Heading, VStack, FormControl, Input, Link, Button, HStack, Center } from "native-base";
 import { NativeStackNavigationProp } from "react-native-screens/lib/typescript/native-stack/types";
 import { AnyElement } from "@/constants";
 import { ISingIn } from "./services";
 import { useSingIn } from "./queryHook";
 const SingIn = ({ navigation }: { navigation: NativeStackNavigationProp<AnyElement> }) => {
     const [form, setForm] = React.useState<ISingIn>({} as ISingIn)
-    const { mutate: singIn } = useSingIn(() => navigation.navigate('Home'))
+    const { mutate: singIn } = useSingIn(() => {
+        navigation.navigate('Home')
+    })
     const onFinish = () => {
         if (form) {
             singIn(form)
